@@ -1,0 +1,38 @@
+Prototype 1:
+
+First prototype using the Google Docs style commenting model, where clicking
+a card brings it inline with its annotation. Each card is fully visible and
+a card above pushes all cards below down until there is enough space.
+
+Prototype 2:
+
+A second crude prototype to explore what would happen if many annotation sat
+at their exact positions but surrounding cards moved away when activated.
+
+Prototype 3:
+
+An extension of prototype 1 but with comments added to the top of the viewer
+and an improved focused state.
+
+Prototype 4:
+
+Same as prototype 3 but with triple the number of cards.
+
+Prototype 5:
+
+Same as prototype 2 but with triple the number of cards.
+
+Prototype 6:
+
+This is a development from prototype 3 that moves the comments to the bottom
+of the page at all times.
+
+Prototype 7:
+
+This adds toggles for the comments section to allow them to be turned on and
+off. The idea being the same for annotation too.
+
+Positioning Demo:
+
+A more complete positioning example that takes into account some of the edge
+cases from prototype 3.

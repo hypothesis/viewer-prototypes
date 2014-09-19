@@ -1,0 +1,138 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 400px;
+  background-color: #F5F5F5;
+  border-left: solid 1px #D3D3D3;
+  font-family: Helvetica Neue, Arial, sans-serif;
+}
+
+.annotation-heading {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  color: #575757;
+  margin: 0 15px;
+  position: absolute;
+  display: none;
+}
+
+.annotation-list {
+  position: relative;
+  margin: 0 15px;
+  -o-transition: -o-transform 0.3s ease-out;
+  -ms-transition: -ms-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+
+.annotation-list.js-active-selection {
+  -webkit-transform: translateX(15px);
+     -moz-transform: translateX(15px);
+      -ms-transform: translateX(15px);
+       -o-transform: translateX(15px);
+          transform: translateX(15px);
+}
+
+.annotation-item {
+  cursor: pointer;
+  background: #FFF;
+  border: solid 1px #D3D3D3;
+  border-radius: 2px;
+  padding: 1em;
+  min-height: 80px;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.js-animate-annotation-list .annotation-item,
+.js-animate-annotation-list .annotation-heading {
+  -webkit-transition: margin-left 0.3s ease-out, -webkit-transform 0.3s ease-out;
+     -moz-transition: margin-left 0.3s ease-out, -moz-transform 0.3s ease-out;
+      -ms-transition: margin-left 0.3s ease-out, -ms-transform 0.3s ease-out;
+       -o-transition: margin-left 0.3s ease-out, -o-transform 0.3s ease-out;
+          transition: margin-left 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.annotation-item {
+  -webkit-transition: margin-left 0.3s ease-out;
+     -moz-transition: margin-left 0.3s ease-out;
+      -ms-transition: margin-left 0.3s ease-out;
+       -o-transition: margin-left 0.3s ease-out;
+          transition: margin-left 0.3s ease-out;
+}
+
+.annotation-item.js-active {
+  /* border-color: #98D2F3; */
+}
+
+.annotation-item.js-pulse {
+  -webkit-animation: card-bounce 200ms 1 alternate forwards;
+     -moz-animation: card-bounce 200ms 1 alternate forwards;
+       -o-animation: card-bounce 200ms 1 alternate forwards;
+          animation: card-bounce 200ms 1 alternate forwards;
+}
+
+.annotation-list.js-active-selection .js-active {
+  margin-left: -15px;
+}
+
+.hl {
+  transition: background-color 150ms ease-in-out;
+  cursor: pointer;
+  background: rgba(255, 225, 104, 0.5);
+  color: black;
+}
+
+.hl.js-active {
+  background: rgba(255, 225, 104, 1);
+  color: black;
+}
+
+.hl.js-pulse {
+  -webkit-animation: hl-pulse 500ms infinite alternate;
+     -moz-animation: hl-pulse 500ms infinite alternate;
+       -o-animation: hl-pulse 500ms infinite alternate;
+          animation: hl-pulse 500ms infinite alternate;
+}
+
+@-webkit-keyframes hl-pulse {
+  0%   { background-color: rgba(255, 225, 104, 0); }
+  100% { background-color: rgba(255, 225, 104, 1); }
+}
+@-moz-keyframes hl-pulse {
+  0%   { background: rgba(255, 225, 104, 0); }
+  100% { background: rgba(255, 225, 104, 1); }
+}
+@-o-keyframes hl-pulse {
+  0%   { background: rgba(255, 225, 104, 0); }
+  100% { background: rgba(255, 225, 104, 1); }
+}
+@keyframes hl-pulse {
+  0%   { background: rgba(255, 225, 104, 0); }
+  100% { background: rgba(255, 225, 104, 1); }
+}
+
+@-webkit-keyframes card-bounce {
+  0%   { margin-left: 0; }
+  80% { margin-left: -8px; }
+  100% { margin-left: -5px; }
+}
+@-moz-keyframes card-bounce {
+  0%   { margin-left: 0; }
+  100% { margin-left: -5px; }
+}
+@-o-keyframes card-bounce {
+  0%   { margin-left: 0; }
+  100% { margin-left: -5px; }
+}
+@keyframes card-bounce {
+  0%   { margin-left: 0; }
+  100% { margin-left: -5px; }
+}

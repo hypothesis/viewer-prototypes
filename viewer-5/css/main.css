@@ -1,0 +1,48 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 400px;
+  background-color: #F5F5F5;
+  border-left: solid 1px #D3D3D3;
+  font-family: Helvetica Neue, Arial, sans-serif;
+}
+
+.annotation-list {
+  position: relative;
+  margin: 0 15px;
+}
+
+.annotation-item {
+  background: #FFF;
+  border: solid 1px #D3D3D3;
+  border-radius: 2px;
+  padding: 1em;
+  min-height: 80px;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.js-animate-annotation-list .annotation-item {
+  -o-transition: -o-transform 0.3s ease-out;
+  -ms-transition: -ms-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+
+.annotation-item.js-active {
+  border-color: #98D2F3;
+}
+
+.hl {
+  background: rgba(255, 255, 0, 0.3);
+}
+
+.hl.js-active {
+  background: rgba(255, 214, 0, 0.6);
+}
